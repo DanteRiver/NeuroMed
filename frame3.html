@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroMed - Confirmación</title>
+    <link rel="stylesheet" href="frame3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="logo" onclick="location.href='frame1.html'" style="cursor:pointer">
+                <span class="logo-neuro">Neuro</span><span class="logo-med">Med</span>
+            </div>
+            <div class="auth-links">
+                <span>INICIA SESIÓN</span>
+                <div class="v-line"></div>
+                <span class="active">REGÍSTRATE</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="caja-verde-confirmacion">
+                <h1 class="titulo-todo-bien">¡Todo bien!</h1>
+                <p class="texto-principal">Completa tus datos para reservar tu hora médica con</p>
+            </div>
+
+            <div class="caja-azul-especialidad">
+                <span id="texto-especialidad" class="nombre-especialidad">Cargando...</span>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-atras" onclick="location.href='frame2.html'">
+                    Atrás
+                </button>
+                <button class="btn btn-continuar" onclick="location.href='frame4.html'">
+                    Continuar
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const seleccion = localStorage.getItem('especialidadSeleccionada');
+            if (seleccion) {
+                document.getElementById('texto-especialidad').innerText = seleccion;
+            }
+        };
+    </script>
+    </main>
+    </div>
+    <script>
+        window.onload = function () {
+            // Buscamos qué especialidad guardamos en el Frame 2
+            const seleccion = localStorage.getItem('especialidadSeleccionada');
+
+            // Si encontramos una, actualizamos el texto en pantalla
+            if (seleccion) {
+                document.getElementById('texto-especialidad').innerText = seleccion;
+            }
+        };
+    </script>
+</body>
+
+</html>

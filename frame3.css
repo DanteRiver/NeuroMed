@@ -1,0 +1,204 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 40px;
+}
+
+.logo-neuro {
+    color: #424242;
+}
+
+.logo-med {
+    color: #bc0bc5;
+}
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.v-line {
+    width: 1.5px;
+    height: 20px;
+    background-color: #D4D4D4;
+}
+
+.active {
+    color: #3c8544;
+    font-weight: 700;
+}
+
+/* CONTENIDO */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* CAJA VERDE */
+.caja-verde-confirmacion {
+    background-color: #d0efd3;
+    width: 100%;
+    max-width: 614px;
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titulo-todo-bien {
+    color: #bc0bc5;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.texto-principal {
+    font-size: 24px;
+    color: #2e2e2e;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* CAJA AZUL ESPECIALIDAD */
+.caja-azul-especialidad {
+    background-color: #d0e4f8;
+    padding: 15px 40px;
+    border-radius: 15px;
+    width: fit-content;
+    min-width: 280px;
+}
+
+.nombre-especialidad {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2e2e2e;
+}
+
+/* BOTÓN CONTINUAR */
+/* GRUPO DE BOTONES */
+.button-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+    /* Ajustado para que quepan dos botones */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ESTILO BASE PARA AMBOS BOTONES */
+.btn {
+    flex: 1;
+    /* Hace que ambos midan lo mismo */
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BOTÓN ATRÁS (Gris/Azul claro) */
+.btn-atras {
+    background-color: #d0e4f8;
+    color: #2e2e2e;
+}
+
+.btn-atras:hover {
+    background-color: #bcd4ec;
+}
+
+/* BOTÓN CONTINUAR (Verde) */
+.btn-continuar {
+    background-color: #3c8544;
+    color: white;
+}
+
+.btn-continuar:hover {
+    background-color: #2d6433;
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+        /* Uno arriba del otro en pantallas pequeñas */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .titulo-todo-bien {
+        font-size: 36px;
+    }
+
+    .texto-principal {
+        font-size: 20px;
+    }
+
+    .nombre-especialidad {
+        font-size: 26px;
+    }
+
+    .caja-verde-confirmacion {
+        width: 95%;
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-continuar {
+        width: 100%;
+        max-width: 250px;
+    }
+}

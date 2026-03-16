@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroMed - Especialidades</title>
+    <link rel="stylesheet" href="frame2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="logo" onclick="location.href='frame1.html'">
+                <span class="logo-neuro">Neuro</span><span class="logo-med">Med</span>
+            </div>
+            <div class="auth-links">
+                <span>INICIA SESIÓN</span>
+                <div class="v-line"></div>
+                <span class="active">REGÍSTRATE</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="search-container">
+                <div class="search-box">
+                    <span>Neurología</span>
+                </div>
+                <div class="search-circle">
+                    <svg viewBox="0 0 25 25" class="lupa-icon">
+                        <path
+                            d="M24.6582 21.6162L19.79 16.748C19.5703 16.5283 19.2725 16.4062 18.96 16.4062H18.1641C19.5117 14.6826 20.3125 12.5146 20.3125 10.1562C20.3125 4.5459 15.7666 0 10.1562 0C4.5459 0 0 4.5459 0 10.1562C0 15.7666 4.5459 20.3125 10.1562 20.3125C12.5146 20.3125 14.6826 19.5117 16.4062 18.1641V18.96C16.4062 19.2725 16.5283 19.5703 16.748 19.79L21.6162 24.6582C22.0752 25.1172 22.8174 25.1172 23.2715 24.6582L24.6533 23.2764C25.1123 22.8174 25.1123 22.0752 24.6582 21.6162ZM10.1562 16.4062C6.7041 16.4062 3.90625 13.6133 3.90625 10.1562C3.90625 6.7041 6.69922 3.90625 10.1562 3.90625C13.6084 3.90625 16.4062 6.69922 16.4062 10.1562C16.4062 13.6084 13.6133 16.4062 10.1562 16.4062Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="dropdown-menu">
+                <div class="menu-item" onclick="seleccionarEspecialidad('Neurología')">Neurología</div>
+                <div class="menu-item" onclick="seleccionarEspecialidad('Terapia Ocupacional')">Terapia Ocupacional
+                </div>
+                <div class="menu-item" onclick="seleccionarEspecialidad('Psicología')">Psicología</div>
+                <div class="menu-item" onclick="seleccionarEspecialidad('Psiquiatría')">Psiquiatría</div>
+                <div class="menu-item" onclick="seleccionarEspecialidad('Fonoaudiólogo')">Fonoaudiólogo</div>
+                <div class="menu-item no-border" onclick="seleccionarEspecialidad('Nutricionista')">Nutricionista</div>
+            </div>
+        </main>
+    </div>
+    <script>
+        function seleccionarEspecialidad(nombre) {
+            // Esto guarda el nombre en la memoria del navegador
+            localStorage.setItem('especialidadSeleccionada', nombre);
+            // Esto te lleva al siguiente frame
+            window.location.href = 'frame3.html';
+        }
+    </script>
+</body>
+
+</html>

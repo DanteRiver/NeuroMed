@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroMed - ¡Listo!</title>
+    <link rel="stylesheet" href="frame5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="logo" onclick="location.href='index.html'" style="cursor:pointer">
+                <span class="logo-neuro">Neuro</span><span class="logo-med">Med</span>
+            </div>
+            <div class="auth-links">
+                <span>INICIA SESIÓN</span>
+                <div class="v-line"></div>
+                <span class="active">REGÍSTRATE</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <h1 class="titulo-listo">¡Listo!</h1>
+
+            <div class="tarjeta-exito">
+                <p class="texto-confirmacion">¡Tu hora ha sido agendada con éxito!</p>
+                <div class="icono-check">
+                    <svg viewBox="0 0 64 64" fill="none" class="circulo">
+                        <circle cx="32" cy="32" r="30.5" stroke="#2E2E2E" stroke-width="3" />
+                    </svg>
+                    <svg viewBox="0 0 50 50" fill="none" class="check-mark">
+                        <path d="M10 25L20 35L40 15" stroke="#2E2E2E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="acciones-container">
+                <div class="accion-item">
+                    <span>Puedes ver tus horas médicas</span>
+                    <button class="btn-aqui btn-verde" onclick="navigateTo('frame1.html')">Aquí</button>
+                </div>
+
+                <div class="accion-item">
+                    <span>Puedes modificar o cancelar tus horas</span>
+                    <button class="btn-aqui btn-azul" onclick="navigateTo('frame1.html')">Aquí</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

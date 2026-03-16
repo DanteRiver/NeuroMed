@@ -1,0 +1,138 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 38px;
+}
+.logo-neuro { color: #424242; }
+.logo-med { color: #bc0bc5; }
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+.v-line { width: 1px; height: 20px; background: #ccc; }
+.active { color: #3c8544; font-weight: bold; }
+
+/* CONTENIDO */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.formulario-azul {
+    background-color: #d0e4f8;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.input-registro {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid white;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    color: #2e2e2e;
+}
+
+.no-line { border-bottom: none; }
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.lupa {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    opacity: 0.6;
+}
+
+/* BOTONES - Aquí está la clave */
+.button-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+    justify-content: center;
+}
+
+.btn {
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-gray { background-color: #d0e4f8; color: #2e2e2e; }
+.btn-green { background-color: #3c8544; color: white; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .content {
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+}

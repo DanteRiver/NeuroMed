@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 40px 0;
+}
+
+.logo {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 40px;
+    cursor: pointer;
+}
+.logo-neuro { color: #424242; }
+.logo-med { color: #bc0bc5; }
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.v-line { width: 1px; height: 20px; background: #ccc; }
+.active { color: #3c8544; font-weight: bold; }
+
+/* CONTENIDO */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio pequeño entre buscador y menú */
+}
+
+/* BUSCADOR */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.search-box {
+    background-color: #a7c7e7;
+    flex: 1;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+
+.search-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #3c8544;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lupa-icon { width: 22px; }
+
+/* MENÚ DESPLEGABLE */
+.dropdown-menu {
+    background-color: #d0e4f8;
+    width: 100%;
+    max-width: 450px; /* Mismo ancho que el buscador */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.menu-item {
+    padding: 18px 25px;
+    border-bottom: 2px solid white;
+    font-size: 18px;
+    color: #2e2e2e;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #bcd4ec;
+}
+
+.no-border { border-bottom: none; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 30px;
+    }
+    
+    .search-container, .dropdown-menu {
+        width: 95%;
+    }
+
+    .menu-item {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,159 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 40px;
+}
+.logo-neuro { color: #424242; }
+.logo-med { color: #bc0bc5; }
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.v-line { width: 1.5px; height: 20px; background-color: #D4D4D4; }
+.active { color: #3c8544; font-weight: 700; }
+
+/* CONTENIDO PRINCIPAL */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.titulo-listo {
+    font-size: 48px;
+    color: #bc0bc5;
+    font-weight: 700;
+}
+
+/* TARJETA VERDE */
+.tarjeta-exito {
+    background-color: #d0efd3;
+    width: 100%;
+    max-width: 614px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.texto-confirmacion {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2e2e2e;
+    max-width: 370px;
+}
+
+.icono-check {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.check-mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+}
+
+/* ACCIONES (LOS "AQUÍ") */
+.acciones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 614px;
+}
+
+.accion-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+.btn-aqui {
+    width: 140px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-verde { background-color: #3c8544; color: white; }
+.btn-verde:hover { background-color: #2d6433; }
+
+.btn-azul { background-color: #d0e4f8; color: #686767; }
+.btn-azul:hover { background-color: #bcd4ec; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header { flex-direction: column; gap: 15px; }
+    
+    .tarjeta-exito {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .texto-confirmacion { font-size: 26px; }
+
+    .accion-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .titulo-listo { font-size: 38px; }
+}
+
+@media (max-width: 480px) {
+    .btn-aqui { width: 100%; max-width: 200px; }
+    .texto-confirmacion { font-size: 22px; }
+}
